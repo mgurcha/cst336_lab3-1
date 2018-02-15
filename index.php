@@ -17,7 +17,7 @@
             $player1,
             $player2,
             $player3,
-            $player,
+            $player4,
             );
             
             function printGame($allPlayers){
