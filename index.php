@@ -29,6 +29,13 @@
             }
             
         printGame($allPlayers);
+        
+
+        
+        //create array of 52 cards
+        //each card an associative array ==> suit, rank, imgURL, points
+        //popOff one card a time to generate the hand
+ 
         ?>
     </body>
 </html>
