@@ -29,6 +29,39 @@
             }
             
         printGame($allPlayers);
+        getImgURL(0);
+                
+                /*
+                create array of 52 cards
+                    //each card a associative array ==> suit, rank, imgURL, points
+                shuffle array
+                pop off one card a time to generate hand
+                */
+                
+        function getImgURL($index){
+                    
+                    //get number 0 to 51
+                    //return imgURL
+                    
+                    $suitIndex = floor ($index / 13);
+                    echo "suitIndex: $suitIndex";
+                    
+                    // switch
+                }
+                
+                function generateDeck(){
+                    for($i=0; $i<51; $i++){
+                        $card = array(
+                            'imgURL' => ""
+                            );
+                    }
+                    
+                    
+                }
+                
+                function getHand(){
+                    
+                }
         ?>
     </body>
 </html>
