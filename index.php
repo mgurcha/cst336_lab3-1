@@ -43,6 +43,16 @@
                     $suitIndex = floor ($index / 13);
                     echo "suitIndex: $suitIndex";
                     
+                    switch ($suitIndex) {
+                        case 'value':
+                            // code...
+                            break;
+                        
+                        default:
+                            // code...
+                            break;
+                    }
+                    
                     // switch
                 }
                 
