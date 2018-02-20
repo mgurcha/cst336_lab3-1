@@ -22,7 +22,9 @@
         //echo "<img src= './img/cards/clubs/2.png'/>";
             echo "<img src='".$player['imgURL']."'/>";
             echo $player['name'] . "<br/> <br />";
+            echo $player['points'];
             displayHand($player);
+            
         }
     }
     
@@ -56,8 +58,10 @@
                  $cardpath = "img/cards/spades/" . "$num" . ".png";
                 break;
             }   
-          
+          $player['points'] += $temp;
         }while ($cards[$cardpath] == 1);
+        
+        
         
         /* USED TO KEEP SCORE
         if($temp != 1){

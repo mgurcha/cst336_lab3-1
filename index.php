@@ -9,7 +9,7 @@
     
     <body>
         <?php
-            for($i =0; $i< 4;$i++){
+            for($i =0; $i< 5;$i++){
                 
                 generateCard($field[0]);
                 generateCard($field[1]);
