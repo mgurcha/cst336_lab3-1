@@ -16,9 +16,7 @@
         <?php
             echo "<table>";
             for($i = 0; $i < 4; $i++){
-                for($j = 0; $j < 4; $j++){
-                    generateCard($field[$i], $cards);
-                }
+                dealHand($field[$i], $$cards);
             }
             
             echo "<tr>".printGame($field)."</tr>";

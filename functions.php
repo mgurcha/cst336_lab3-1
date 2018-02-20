@@ -5,6 +5,7 @@
     $player2 = array('name' => 'Gabriel', 'imgURL' => 'user_img/german.png', 'hand' => array(), 'points' => 0);
     $player3 = array('name' => 'Marco', 'imgURL' => 'user_img/marco.jpg','hand' => array(), 'points' => 0);
     $player4 = array('name' => 'Manjit', 'imgURL' => 'user_img/blue_bird.jpg', 'hand' => array(), 'points' => 0);
+    
     $field = array(
         $player1,
         $player2,
@@ -21,12 +22,20 @@
             echo "<h3 id='points'>".$player['points']."</h3>";
             displayHand($player);
         }
-        //getWinner($player1, $player2,$player3, $player4);
+        getWinner($allPlayers);
     }
     
     function displayHand(&$player){
         for($i = 0; $i < count($player['hand']);$i++){
             echo "<img id='cards' src=" .$player['hand'][$i] . " />";
+        }
+        
+    }
+    
+    function dealHand(&$player, &$cards){
+        if($player['points'] <= 36){
+            generateCard($player, $cards);
+            dealHand($player, $cards);
         }
         
     }
@@ -53,31 +62,25 @@
                  $cardpath = "img/cards/spades/" . "$num" . ".png";
                 break;
             }   
-            $player['points'] += $temp;
+            
+            
         }while ($cards[$cardpath] == 1);
 
-
+        $player['points'] += $temp;
         $cards[$cardpath] = 1;
         array_push($player["hand"], $cardpath);
     }
 
 
-    function getWinner($player1, $player2,$player3, $player4){
+    function getWinner($field){
         
-        $smallest = 42 - $player1['points'];
-        $two = 42 - $player2['points'];
-        $three = 42 -$player3['points'];
-        $four = 42 - $player4['points'];
-        
-        
-        if(($two < $smallest) && $two >= 0)
-            $smallest = $two;
-        if(($three < $smallest) && $three >= 0)
-            $smallest = $three;
-        if(($four < $smallest) && $four >= 0)
-            $smallest = $four;
+        foreach($field as $player){
+            if($player['points'] == 42){
+                echo $player['name'] . " Wins!";
+            }
+        }
             
-        echo $player1['points'];
+       // echo $player1['points'];
     }
 
 ?>
