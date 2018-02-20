@@ -1,0 +1,16 @@
+#wrapper{
+	width:900px;
+	margin: 0 auto;
+	border:ridge 4px;
+}
+
+#people{
+	height: auto; 
+    width: auto; 
+	max-width: 100px; 
+    max-height: 100px;	
+}
+
+td{
+	padding: 10px;
+}
