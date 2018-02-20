@@ -14,6 +14,7 @@
     <body>
         <div id="wrapper">
         <?php
+            echo "<table>";
             for($i =0; $i< 5;$i++){
                 
                 generateCard($field[0]);
@@ -22,7 +23,8 @@
                 generateCard($field[3]);
             }
             
-            printGame($field);
+            echo "<tr>".printGame($field)."</tr>";
+            echo "</table>";
         ?>
         </div>
     </body>
