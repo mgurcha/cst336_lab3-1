@@ -1,8 +1,9 @@
 #wrapper{
-	width:900px;
+	width:1000px;
 	height: 800px;
 	margin: 0 auto;
 	border:ridge 4px;
+	text-align: left;
 }
 
 #people{
@@ -13,25 +14,38 @@
     padding: 12px;
 }
 
-#points{
-	width:600px;
-	/*height: 10px;*/
-    margin:0 auto;
-    text-align: right;
-    display: block;
+.points{
+	text-align: right;
+	position: relative;
+	top: -120px;
+	
+}
+#points_num{
+	/*width:00px;*/
+	position: relative;
+	left: -100px;
+	font-size: 1.5em;
+    /*margin:0 auto;*/
 }
 
 #name{
-	margin:0 auto;
 	text-align:left;
+	width: 100px; 
+    padding: 10px;
 }
 
 #cards{
 	margin:0 auto;
-	text-align:right;
+	text-align:justify;
+	position: relative;
+	top: 10px;
 }
 
 body{
 	text-align: center;
 }
 
+#winner{
+	font-size: 2em;
+	text-align: center;
+}

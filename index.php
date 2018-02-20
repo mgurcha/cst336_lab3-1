@@ -8,6 +8,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <h2>
+            Lab 3: SilverJack Card Game
+        </h2>
         
     </head>
     
