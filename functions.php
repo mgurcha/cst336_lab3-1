@@ -1,5 +1,5 @@
 <?php
-    $player1 = array('name' => 'Judith', 'imgURL' =>'https://78.media.tumblr.com/513aaf30566f6308d379b9a76a71c458/tumblr_otox3fKZ9Y1s05s0mo1_500.png' , 'hand' => array(), 'points' => 0);
+     $player1 = array('name' => 'Judith', 'imgURL' =>'https://78.media.tumblr.com/513aaf30566f6308d379b9a76a71c458/tumblr_otox3fKZ9Y1s05s0mo1_500.png' , 'hand' => array(), 'points' => 0);
     //$cards = array();
     $player2 = array('name' => 'Gabriel', 'imgURL' => 'user_img/german.png', 'hand' => array(), 'points' => 0);
      $player3 = array('name' => 'Marco', 'imgURL' => 'user_img/marco.jpg','hand' => array(), 'points' => 0);
@@ -24,8 +24,8 @@
             echo $player['name'] . "<br/> <br />";
             echo $player['points'];
             displayHand($player);
-            
         }
+        //getWinner($player1, $player2,$player3, $player4);
     }
     
     function displayHand(&$player){
@@ -59,6 +59,7 @@
                 break;
             }   
           $player['points'] += $temp;
+          
         }while ($cards[$cardpath] == 1);
         
         
@@ -80,6 +81,24 @@
         
         $cards[$cardpath] = 1;
         array_push($player["hand"], $cardpath);
+    }
+    
+    function getWinner($player1, $player2,$player3, $player4){
+        
+        $smallest = 42 - $player1['points'];
+        $two = 42 - $player2['points'];
+        $three = 42 -$player3['points'];
+        $four = 42 - $player4['points'];
+        
+        
+        if(($two < $smallest) && $two >= 0)
+            $smallest = $two;
+        if(($three < $smallest) && $three >= 0)
+            $smallest = $three;
+        if(($four < $smallest) && $four >= 0)
+            $smallest = $four;
+            
+        echo $player1['points'];
     }
     
 ?>
