@@ -1,7 +1,7 @@
 <?php
     
     $cards = array();
-    $player1 = array('name' => 'Judith', 'imgURL' =>'https://78.media.tumblr.com/513aaf30566f6308d379b9a76a71c458/tumblr_otox3fKZ9Y1s05s0mo1_500.png' , 'hand' => array(), 'points' => 0);
+    $player1 = array('name' => 'Judith', 'imgURL' =>'user_img/cat.png' , 'hand' => array(), 'points' => 0);
     $player2 = array('name' => 'Gabriel', 'imgURL' => 'user_img/german.png', 'hand' => array(), 'points' => 0);
     $player3 = array('name' => 'Marco', 'imgURL' => 'user_img/marco.jpg','hand' => array(), 'points' => 0);
     $player4 = array('name' => 'Manjit', 'imgURL' => 'user_img/blue_bird.jpg', 'hand' => array(), 'points' => 0);
@@ -80,9 +80,33 @@
             if($player['points'] == 42){
                 echo $player['name'] . " Wins!";
             }
-        }
             
-       // echo $player1['points'];
+        }
+        
+        
+        $one = 42 - $player1['points'];
+        $two = 42 -$player2['points'];
+        $three = 42 - $player3['points'];
+        $four = 42 - $player4['points'];
+        
+        if($one >= 0){
+            $smallest = $one;
+        }
+        
+        if($two < $smallest && $two >= 0 ){
+            $two = $smallest;
+        }
+        if($three < $smallest && $three >= 0 ){
+            $three = $smallest;
+        }
+        if($four < $smallest && $four >= 0 ){
+            $four = $smallest;
+        }
+        
+        
+        
+            
+     
     }
 
 ?>
