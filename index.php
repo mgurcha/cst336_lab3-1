@@ -13,8 +13,6 @@
     
     <body>
         <div id="wrapper">
-            
-        
         <?php
             for($i =0; $i< 5;$i++){
                 
