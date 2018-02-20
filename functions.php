@@ -20,7 +20,7 @@
     function printGame($allPlayers){
         foreach ($allPlayers as $player) {
         //echo "<img src= './img/cards/clubs/2.png'/>";
-            echo "<img src='".$player['imgURL']."'/>";
+            echo "<img id='people' src='".$player['imgURL']."'>";
             echo $player['name'] . "<br/> <br />";
             echo $player['points'];
             displayHand($player);
@@ -29,11 +29,13 @@
     }
     
     function displayHand(&$player){
-        echo "<div>";
+        echo "<table>";
+        echo "<td>";
         for($i = 0; $i < count($player['hand']);$i++){
             echo "<img src=" .$player['hand'][$i] . " />";
         }
-        echo "</div>";
+        echo "<table>";
+        echo "</td>";
     }
     
     function generateCard(&$player){

@@ -1,3 +1,7 @@
+<style>
+	@import url(css/styles.css); 
+</style>
+
 <?php
     include 'functions.php';
 ?>
@@ -8,6 +12,9 @@
     </head>
     
     <body>
+        <div id="wrapper">
+            
+        
         <?php
             for($i =0; $i< 5;$i++){
                 
@@ -19,6 +26,7 @@
             
             printGame($field);
         ?>
+        </div>
     </body>
 </html>
 
