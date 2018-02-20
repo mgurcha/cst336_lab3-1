@@ -99,7 +99,7 @@
         }
         
         
-        // echo "<div>";
+        echo "<div id='result'>";
         if(count($winners) == 1){
             echo "<h3 id='winner'>" . $winners[0]['name'] . " Wins!" . "</h3>";
         }
@@ -114,7 +114,7 @@
             }
             echo "<h3 id='winner'>" . $fn . " Win!" . "</h3>";
         }
-        // echo "</div>";
+        echo "</div>";
         
         
     

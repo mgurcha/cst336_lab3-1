@@ -49,3 +49,17 @@ body{
 	font-size: 2em;
 	text-align: center;
 }
+
+#result{
+	position: absolute center;
+}
+
+input{
+		top: 130px;
+        position:relative;
+        font-size:1.3em;
+        background-color: Transparent;
+        font-weight:bold;
+        color:black;
+        cursor:pointer;
+    }
