@@ -16,11 +16,13 @@
     function printGame($allPlayers){
         foreach ($allPlayers as $player) {
         //echo "<img src= './img/cards/clubs/2.png'/>";
-            echo "<h3 id='name'>". $player['name'] . "</h3>";
-            echo "<img id='people' align='left' src='".$player['imgURL']."'/>";
+            echo "<img id='people' align='left' src='".$player['imgURL']."'/>". displayHand($player)
+            . "<h3 id='name'>".$player['name'] . "</h3>"."<h3 id='points'>".$player['points']."</h3>";
+            
+            // echo "<h3 id='name'>". $player['name'] . "</h3>";
             // echo $player['name'] . "<br/> <br />";
-            echo "<h3 id='points'>".$player['points']."</h3>";
-            displayHand($player);
+            // echo "<h3 id='points'>".$player['points']."</h3>";
+            // displayHand($player);
         }
         getWinner($allPlayers);
     }
