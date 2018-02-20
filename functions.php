@@ -72,37 +72,83 @@
         $cards[$cardpath] = 1;
         array_push($player["hand"], $cardpath);
     }
+    function cmp($a, $b){
+          if($a['points'] < $b['points']){
+              return 1;
+           }
+          return 0;
+        }
+          
+        
 
 
-    function getWinner($field){
+    function getWinner(&$field){
+        
+        $winners = array();
+        
+        usort($field, cmp);
         
         foreach($field as $player){
-            if($player['points'] == 42){
-                echo $player['name'] . " Wins!";
+            if(count($winners) == 0 && $player['points'] <= 42){
+                array_push($winners,$player);
             }
-            
+            else if($player['points'] <= 42){
+                if($winners[0]['points'] == $player['points']){
+                    array_push($winners, $player);
+                    
+                }
+                 else if($winners[0] < $player['points']){
+                     $winners = array();
+                     array_push($winners, $player);
+                 }
+ 
+            }
         }
         
         
-        $one = 42 - $player1['points'];
+        echo "<div>";
+        if(count($winners) == 1){
+            echo $winners[0]['name'] . " Wins!";
+        }
+        elseif(count($winners)== 0){
+            echo "No one wins.";
+        }
+        else{
+            $fn = "Its a Tie!<br/> ";
+            for($i = 0; $i < count($winners); $i++){
+                $fn =  $fn . $winners[$i]['name'];
+                $fn =  $fn . ", ";
+            }
+            echo $fn . " Win!";
+        }
+        echo "</div>";
+        
+        
+        
+        /*$one = 42 - $player1['points'];
         $two = 42 -$player2['points'];
         $three = 42 - $player3['points'];
         $four = 42 - $player4['points'];
         
         if($one >= 0){
             $smallest = $one;
+            $id = $player1['name'];
         }
         
         if($two < $smallest && $two >= 0 ){
             $two = $smallest;
+            $id = $player2['name'];
         }
         if($three < $smallest && $three >= 0 ){
             $three = $smallest;
+            $id = $player3['name'];
         }
         if($four < $smallest && $four >= 0 ){
             $four = $smallest;
+            $id = $player4['name'];
         }
         
+        echo $id . " Wins!"; */
         
         
             
