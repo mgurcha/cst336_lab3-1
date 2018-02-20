@@ -1,0 +1,34 @@
+#wrapper{
+	width:900px;
+	height: 800px;
+	margin: 0 auto;
+	border:ridge 4px;
+}
+
+#people{
+	height: auto; 
+    width: auto; 
+	max-width: 100px; 
+    max-height: 100px;
+    padding: 12px;
+}
+
+#points{
+	width:600px;   
+    margin:0 auto;
+    text-align: right;
+}
+
+#name{
+	margin:0 auto;
+	text-align:left;
+}
+
+body{
+	text-align: center;
+}
+
+#cards{
+	text-align: left;
+	margin: 0 auto;
+}

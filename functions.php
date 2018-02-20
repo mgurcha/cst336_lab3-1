@@ -14,19 +14,21 @@
     
     function printGame($allPlayers){
         foreach ($allPlayers as $player) {
-            echo "<div>";
-            echo "<img src='".$player['imgURL']."' width='200' height='250'/>";
+        //echo "<img src= './img/cards/clubs/2.png'/>";
+            echo "<h3 id='name'>". $player['name'] . "</h3>";
+            echo "<img id='people' align='left' src='".$player['imgURL']."'/>";
+            // echo $player['name'] . "<br/> <br />";
+            echo "<h3 id='points'>".$player['points']."</h3>";
             displayHand($player);
-            echo $player['name'] . "<br/> <br />";
-            echo "</div>";
         }
+        //getWinner($player1, $player2,$player3, $player4);
     }
     
     function displayHand(&$player){
-        
         for($i = 0; $i < count($player['hand']);$i++){
-            echo "<img src=" .$player['hand'][$i] . " />";
+            echo "<img id='cards' src=" .$player['hand'][$i] . " />";
         }
+        
     }
     
     function generateCard(&$player, &$cards){
@@ -51,11 +53,31 @@
                  $cardpath = "img/cards/spades/" . "$num" . ".png";
                 break;
             }   
-          
-        }while($cards[$cardpath] != null);
-        
+            $player['points'] += $temp;
+        }while ($cards[$cardpath] == 1);
+
+
         $cards[$cardpath] = 1;
         array_push($player["hand"], $cardpath);
     }
-    
+
+
+    function getWinner($player1, $player2,$player3, $player4){
+        
+        $smallest = 42 - $player1['points'];
+        $two = 42 - $player2['points'];
+        $three = 42 -$player3['points'];
+        $four = 42 - $player4['points'];
+        
+        
+        if(($two < $smallest) && $two >= 0)
+            $smallest = $two;
+        if(($three < $smallest) && $three >= 0)
+            $smallest = $three;
+        if(($four < $smallest) && $four >= 0)
+            $smallest = $four;
+            
+        echo $player1['points'];
+    }
+
 ?>
