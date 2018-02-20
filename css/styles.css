@@ -14,9 +14,8 @@
 }
 
 #points{
-	width:800px;   
+	width:600px;   
     margin:0 auto;
-    /*position:absolute;*/
     text-align: right;
 }
 
@@ -25,3 +24,11 @@
 	text-align:left;
 }
 
+body{
+	text-align: center;
+}
+
+#cards{
+	text-align: left;
+	margin: 0 auto;
+}

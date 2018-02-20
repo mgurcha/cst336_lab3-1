@@ -19,8 +19,8 @@
     function printGame($allPlayers){
         foreach ($allPlayers as $player) {
         //echo "<img src= './img/cards/clubs/2.png'/>";
-            echo "<img id='people' align='left' src='".$player['imgURL']."'/>";
             echo "<h3 id='name'>". $player['name'] . "</h3>";
+            echo "<img id='people' align='left' src='".$player['imgURL']."'/>";
             // echo $player['name'] . "<br/> <br />";
             echo "<h3 id='points'>".$player['points']."</h3>";
             displayHand($player);
@@ -30,7 +30,7 @@
     
     function displayHand(&$player){
         for($i = 0; $i < count($player['hand']);$i++){
-            echo "<img src=" .$player['hand'][$i] . " />";
+            echo "<img id='cards' src=" .$player['hand'][$i] . " />";
         }
         
     }
