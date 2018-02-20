@@ -14,13 +14,13 @@
     <body>
         <div id="wrapper">
         <?php
-            echo "<table>";
+            
+            
             for($i = 0; $i < 4; $i++){
                 dealHand($field[$i], $$cards);
             }
             
-            echo "<tr>".printGame($field)."</tr>";
-            echo "</table>";
+            echo printGame($field);
         ?>
         </div>
     </body>

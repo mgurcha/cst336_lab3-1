@@ -14,14 +14,11 @@
 }
 
 #points{
-	width:600px;   
+	width:600px;
+	/*height: 10px;*/
     margin:0 auto;
     text-align: right;
-    /*width:700px;*/
-    /*margin:0 auto;*/
-    /*top:600px;*/
-    /*line-height: .7em;*/
-    /*text-align: right;*/
+    display: block;
 }
 
 #name{
@@ -29,11 +26,12 @@
 	text-align:left;
 }
 
+#cards{
+	margin:0 auto;
+	text-align:right;
+}
+
 body{
 	text-align: center;
 }
 
-#cards{
-	text-align: left;
-	margin: 0 auto;
-}
