@@ -12,7 +12,9 @@
         $player3,
         $player4
     );
-    
+
+    shuffle($field);
+
     function printGame($allPlayers){
         foreach ($allPlayers as $player) {
             echo "<img id='people' align='left' src='".$player['imgURL']."'/>". "<h3 id='name'>".$player['name'] .displayHand($player)."</h3>"
