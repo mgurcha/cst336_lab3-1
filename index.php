@@ -8,10 +8,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <h2>
+        <h1 id="title">
             Lab 3: SilverJack Card Game
-        </h2>
-        
+        </h1>
+        <br />
     </head>
     
     <body>
@@ -27,7 +27,7 @@
         ?>
         </div>
         <form>
-            <input type="submit" value="Play Again!"/>
+            <input type="submit" value=" Play Again! "/>
         </form>
     </body>
 </html>
