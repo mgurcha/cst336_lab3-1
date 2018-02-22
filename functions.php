@@ -79,12 +79,15 @@
     function getWinner(&$field){
         
         $winners = array();
+        $winningEndPoints += $player['points'];
         
         usort($field, cmp);
         
         foreach($field as $player){
+            $winningEndPoints += $player['points'];
             if(count($winners) == 0 && $player['points'] <= 42){
                 array_push($winners,$player);
+                
             }
             else if($player['points'] <= 42){
                 if($winners[0]['points'] == $player['points']){
@@ -94,14 +97,16 @@
                  else if($winners[0] < $player['points']){
                      $winners = array();
                      array_push($winners, $player);
+                     
                  }
             }
         }
         
+        $winningEndPoints -=$winners[0]['points'];
         
         echo "<div id='result'>";
         if(count($winners) == 1){
-            echo "<h3 id='winner'>" . $winners[0]['name'] . " Wins!" . "</h3>";
+            echo "<h3 id='winner'>" . $winners[0]['name'] . " Wins " . $winningEndPoints. " Points!" . "</h3>";
         }
         elseif(count($winners)== 0){
             echo "<h3 id='winner'>" ."No one wins." . "</h3>";
