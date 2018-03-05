@@ -15,9 +15,9 @@
     </head>
     
     <body>
+
         <div id="wrapper">
         <?php
-            
             
             for($i = 0; $i < 4; $i++){
                 dealHand($field[$i], $$cards);
@@ -33,6 +33,7 @@
         </form>
            
     </body>
+
 </html>
 
 
