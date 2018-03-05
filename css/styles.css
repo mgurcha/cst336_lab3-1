@@ -1,9 +1,11 @@
 #wrapper{
+	border-radius: 15px;
 	width:1000px;
 	height: 800px;
 	margin: 0 auto;
 	border:ridge 4px;
 	text-align: left;
+	background: linear-gradient(to bottom right, blue, white);
 }
 
 #people{
@@ -16,6 +18,7 @@
 }
 
 .points{
+	text-shadow: 3px 3px 7px #FF0000;
 	text-align: right;
 	position: relative;
 	top: -120px;
@@ -28,6 +31,8 @@
 
 #name{
 	font-family:  Arial, Helvetica, sans-serif;
+	text-shadow: 3px 3px 7px #FF0000;
+	border-radius: 10px;
 	text-align:center;
 	position: relative;
 	left: 10px;
@@ -38,7 +43,7 @@
 
 #cards{
 	
-	border-radius: 15px;
+	border-radius: 12px;
 	margin:0 auto;
 	text-align:justify;
 	position: relative;
@@ -46,35 +51,62 @@
 }
 
 body{
-	
+	background: linear-gradient(to bottom right, white, blue);
 	text-align: center;
 }
 
 #winner{
 	font-size: 3em;
-	color: Red;
+	text-shadow: 2px 2px 8px #FF0000;
+	color: Black;
 	text-align: center;
 }
 
 #result{
+	
 	position: absolute center;
 }
 
 input{
-
-		top: 130px;
-        position:relative;
-        font-family:  Arial, Helvetica, sans-serif;
-        font-size:1.5em;
-        background-color: Transparent;
-        font-weight:bold;
-        color:black;
-        cursor:pointer;
+  display: inline-block;
+  top: 125px;
+  font-weight: bold;
+  padding: 10px 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  position: relative;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+	/*border-radius: 10px;*/
+	/*top: 130px;*/
+ /*   position:relative;*/
+ /*   font-family:  Arial, Helvetica, sans-serif;*/
+ /*   font-size:1.5em;*/
+ /*   background-color: Transparent;*/
+ /*   font-weight:bold;*/
+ /*   color:black;*/
+ /*   cursor:pointer;*/
         
         
 }
-
+input:hover{ 
+	background-color: gray ;
+}
+input: active { 
+  background-color: #3e8e41;
+  box-shadow: 0 1px #666;
+  transform: translateY(2px);
+}
 #title{
+	border-radius: 25px;
 	font-family:  Arial, Helvetica, sans-serif;
 	text-shadow: 2px 2px 8px #FF0000;
 	height: 60px;
