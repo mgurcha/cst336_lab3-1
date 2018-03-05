@@ -2,7 +2,7 @@
     
     $cards = array();
     $player1 = array('name' => 'Judith', 'imgURL' =>'user_img/cat.png' , 'hand' => array(), 'points' => 0);
-    $player2 = array('name' => 'Gabriel', 'imgURL' => 'user_img/german.png', 'hand' => array(), 'points' => 0);
+    $player2 = array('name' => 'Gabriel', 'imgURL' => 'user_img/gabe_pic.jpg', 'hand' => array(), 'points' => 0);
     $player3 = array('name' => 'Marco', 'imgURL' => 'user_img/marco.jpg','hand' => array(), 'points' => 0);
     $player4 = array('name' => 'Manjit', 'imgURL' => 'user_img/blue_bird.jpg', 'hand' => array(), 'points' => 0);
     
