@@ -9,7 +9,7 @@
 <html>
     <head>
         <h1 id="title">
-            Lab 3: SilverJack Card Game
+            SilverJack Card Game
         </h1>
         <br />
     </head>
