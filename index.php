@@ -26,9 +26,12 @@
             echo printGame($field);
         ?>
         </div>
+        
         <form>
-            <input type="submit" value=" Play Again! "/>
+          <input type="submit" value=" Play Again! " /> 
+          
         </form>
+           
     </body>
 </html>
 
