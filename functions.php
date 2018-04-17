@@ -119,9 +119,10 @@
                 $fn =  $fn . $winners[$i]['name'];
                 $fn =  $fn . ", ";
                 $winningPoints -= $winners[$i]['points'];
+                $winsPoint = $winningPoints + $winningEndPoints;
             }
             
-            echo "<h3 id='winner'>" . $fn . " Win " . $winningPoints . " Points!" . "</h3>";
+            echo "<h3 id='winner'>" . $fn . " Win " . $winsPoint . " Points!" . "</h3>";
         }
         echo "</div>";
         
