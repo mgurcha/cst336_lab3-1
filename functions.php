@@ -104,11 +104,11 @@
             }
         }
         
-        $winningEndPoints -=$winners[0]['points'];
+        $winningPoints = $winningEndPoints - $winners[0]['points'];
         
         echo "<div id='result'>";
         if(count($winners) == 1){
-            echo "<h3 id='winner'>" . $winners[0]['name'] . " Wins " . $winningEndPoints. " Points!" . "</h3>";
+            echo "<h3 id='winner'>" . $winners[0]['name'] . " Wins " . $winningPoints. " Points!" . "</h3>";
         }
         elseif(count($winners)== 0){
             echo "<h3 id='winner'>" ."No one wins." . "</h3>";
@@ -121,7 +121,7 @@
                 $fn_points = $winners[$i]['points'];
                 $fn_points = $fn_points * count($winners);
             }
-            $winningTotalPoints += $player['points'];
+            $winningTotalPoints = $winningEndPoints - $fn_points;
             //$winningTotalPoints = $winningTotalPoints - $fn_points;
             
             echo "<h3 id='winner'>" . $fn . " Win " . $winningTotalPoints . " Points!" . "</h3>";
