@@ -31,7 +31,7 @@
     }
     
     function dealHand(&$player, &$cards){
-        if($player['points'] <= 36){
+        if($player['points'] < 42){
             generateCard($player, $cards);
             dealHand($player, $cards);
         }
