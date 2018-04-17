@@ -32,7 +32,7 @@
             
             
             echo printGame($field);
-            echo count($_SESSION['times']);
+            // echo count($_SESSION['times']);
             echo '<br>';
             
              if(count($_SESSION['times']) >= 10){
@@ -40,7 +40,7 @@
                 for($i = count($_SESSION['times']) - 11; $i < count($_SESSION['times']); $i++){
                     $total += $_SESSION['times'][$i];
                 }
-                echo $total / 10;
+                // echo $total / 10;
             }
             
             if(count($_SESSION['times']) == 10){

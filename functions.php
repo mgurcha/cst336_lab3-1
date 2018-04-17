@@ -30,7 +30,7 @@
     }
     
     function dealHand(&$player, &$cards){
-        if($player['points'] <= 36){
+        if($player['points'] < 37){
             generateCard($player, $cards);
             dealHand($player, $cards);
         }
@@ -103,11 +103,11 @@
             }
         }
         
-        $winningEndPoints -=$winners[0]['points'];
+        $winningPoints = $winningEndPoints - $winners[0]['points'];
         
         echo "<div id='result'>";
         if(count($winners) == 1){
-            echo "<h3 id='winner'>" . $winners[0]['name'] . " Wins " . $winningEndPoints. " Points!" . "</h3>";
+            echo "<h3 id='winner'>" . $winners[0]['name'] . " Wins " . $winningPoints. " Points!" . "</h3>";
         }
         elseif(count($winners)== 0){
             echo "<h3 id='winner'>" ."No one wins." . "</h3>";
@@ -117,9 +117,12 @@
             for($i = 0; $i < count($winners); $i++){
                 $fn =  $fn . $winners[$i]['name'];
                 $fn =  $fn . ", ";
+                $fn_points = $winners[$i]['points'];
+                $fn_points = $fn_points * count($winners);
             }
-            echo "<h3 id='winner'>" . $fn . " Win!" . "</h3>";
-        }
+            $winningTotalPoints = $winningEndPoints - $fn_points;
+            
+        echo "<h3 id='winner'>" . $fn . " Win " . $winningTotalPoints . " Points Each!" . "</h3>";        }
         echo "</div>";
         
         
