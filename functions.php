@@ -1,5 +1,4 @@
 <?php
-    
     $cards = array();
     $player1 = array('name' => 'Judith', 'imgURL' =>'user_img/cat.png' , 'hand' => array(), 'points' => 0);
     $player2 = array('name' => 'Gabriel', 'imgURL' => 'user_img/gabe_pic.jpg', 'hand' => array(), 'points' => 0);
@@ -123,8 +122,7 @@
             }
             $winningTotalPoints = $winningEndPoints - $fn_points;
             
-            echo "<h3 id='winner'>" . $fn . " Win " . $winningTotalPoints . " Points Each!" . "</h3>";
-        }
+        echo "<h3 id='winner'>" . $fn . " Win " . $winningTotalPoints . " Points Each!" . "</h3>";        }
         echo "</div>";
         
         
