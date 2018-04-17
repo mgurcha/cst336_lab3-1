@@ -118,7 +118,8 @@
             for($i = 0; $i < count($winners); $i++){
                 $fn =  $fn . $winners[$i]['name'];
                 $fn =  $fn . ", ";
-                $fn_points = $winners[$i]['points'] + $winners[$i]['points'] + $winners[$i]['points'];
+                $fn_points = $winners[$i]['points'];
+                $fn_points = $fn_points + ;
                 
                 $winningTotalPoints += $player['points'];
                 $winningTotalPoints = $winningTotalPoints - $winners[$i]['points'];
