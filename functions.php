@@ -119,8 +119,9 @@
                 $fn =  $fn . $winners[$i]['name'];
                 $fn =  $fn . ", ";
                 $winningTotalPoints += $player['points'];
-                $winningTotalPoints = $winners[$i]['points'];
+                $winningTotalPoints = $winningTotalPoints - $winners[$i]['points'];
             }
+            echo "<h3>" . "Points:  " . $fn['points'] . "</h3>";
             
             echo "<h3 id='winner'>" . $fn . " Win " . $winningTotalPoints . " Points!" . "</h3>";
         }
