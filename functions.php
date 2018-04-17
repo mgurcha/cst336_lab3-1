@@ -123,7 +123,7 @@
                 $winningTotalPoints -= $winningPoints;
             }
             
-            echo "<h3 id='winner'>" . $fn . " Win " . $winsPoint . " Points!" . "</h3>";
+            echo "<h3 id='winner'>" . $fn . " Win " . $winningTotalPoints . " Points!" . "</h3>";
         }
         echo "</div>";
         
